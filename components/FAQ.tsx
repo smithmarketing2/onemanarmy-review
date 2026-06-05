@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -30,28 +29,26 @@ export default function FAQ() {
   ];
 
   return (
-    <section className="py-20 px-4 bg-slate-50">
-      <div className="max-w-3xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-12 text-center">
-          Frequently Asked Questions
-        </h2>
+    <section className="py-20 px-6 max-w-3xl mx-auto">
+      <h2 className="text-3xl md:text-4xl font-black text-center mb-12">
+        Frequently Asked Questions
+      </h2>
 
-        <div className="space-y-4">
-          {faqs.map((faq, i) => (
-            <div key={i} className="bg-white rounded-xl border border-slate-200 overflow-hidden">
-              <button
-                onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                className="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-slate-50 transition-colors"
-              >
-                <span className="font-semibold text-slate-900 pr-4">{faq.q}</span>
-                <ChevronDown className={`w-5 h-5 text-slate-400 shrink-0 transition-transform ${openIndex === i ? "rotate-180" : ""}`} />
-              </button>
-              {openIndex === i && (
-                <div className="px-6 pb-5 text-slate-600">{faq.a}</div>
-              )}
-            </div>
-          ))}
-        </div>
+      <div className="space-y-4">
+        {faqs.map((faq, i) => (
+          <div key={i} className="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+            <button
+              onClick={() => setOpenIndex(openIndex === i ? null : i)}
+              className="w-full flex justify-between items-center px-8 py-6 text-left font-bold hover:bg-white/5 transition-colors"
+            >
+              <span className="pr-4">{faq.q}</span>
+              <span className={`text-slate-400 transition-transform ${openIndex === i ? "rotate-180" : ""}`}>▼</span>
+            </button>
+            {openIndex === i && (
+              <div className="px-8 pb-6 text-slate-400">{faq.a}</div>
+            )}
+          </div>
+        ))}
       </div>
     </section>
   );

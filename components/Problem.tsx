@@ -11,32 +11,29 @@ export default function Problem() {
   ];
 
   return (
-    <section className="py-20 px-4 bg-slate-50">
-      <div className="max-w-3xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">
-          Why Most Solo Operators Never Scale
-        </h2>
-        <p className="text-lg text-slate-600 mb-12">
-          You've seen the promises. You've bought the tools. But your results? Stuck.
-        </p>
+    <section className="py-20 px-6 max-w-4xl mx-auto">
+      <h2 className="text-3xl md:text-4xl font-black text-center mb-4">
+        Why Most Solo Operators <span className="text-red-400">Never Scale</span>
+      </h2>
+      <p className="text-center text-slate-400 text-lg mb-12">
+        You've seen the promises. You've bought the tools. But your results? Stuck.
+      </p>
 
-        <div className="bg-white rounded-2xl p-8 shadow-sm border border-slate-200">
-          <h3 className="text-xl font-bold text-slate-900 mb-6 text-left">
-            🛑 The Brutal Truth About Scaling Solo
-          </h3>
-          <ul className="space-y-4 text-left">
-            {problems.map((problem, i) => (
-              <li key={i} className="flex items-start gap-3 text-slate-700">
-                <span className="text-red-500 font-bold mt-0.5">✗</span>
-                {problem}
-              </li>
-            ))}
-          </ul>
-          <p className="mt-8 text-slate-600 font-medium">
-            Here's what nobody tells you: The problem isn't you. It's that you're doing everything the hard way.
-          </p>
-        </div>
+      <div className="bg-gradient-to-br from-red-500/10 to-red-500/5 border border-red-500/30 rounded-2xl p-10 mb-8">
+        <h3 className="text-red-300 text-xl font-bold mb-4">🛑 The Brutal Truth About Scaling Solo</h3>
+        <ul className="space-y-3">
+          {problems.map((problem, i) => (
+            <li key={i} className="text-slate-300 pl-8 relative">
+              <span className="absolute left-0 text-red-500 font-bold">✗</span>
+              {problem}
+            </li>
+          ))}
+        </ul>
       </div>
+
+      <p className="text-center text-lg text-slate-300">
+        Here's what nobody tells you: <strong className="text-white">The problem isn't you. It's that you're doing everything the hard way.</strong>
+      </p>
     </section>
   );
 }
