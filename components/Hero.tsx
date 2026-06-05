@@ -4,7 +4,7 @@ import { ArrowRight, Sparkles } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 text-white py-24 px-4">
+    <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 text-white py-20 px-4">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-indigo-500 rounded-full blur-3xl" />
@@ -20,25 +20,30 @@ export default function Hero() {
           </span>
         </div>
 
-        {/* Headline */}
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] mb-8">
-          I Replaced 20 Hours of Manual Work With{" "}
+        {/* 3-PART HEADLINE — Chad Nicely Doctrine */}
+        {/* PART 1: Pattern Interrupt — Short & Bold */}
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] mb-6 tracking-tight">
           <span className="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">
-            2 Hours of Direction
-          </span>{" "}
-          Using OneManArmy
+            Humans Are the Bottleneck.
+          </span>
         </h1>
 
-        {/* Subheadline */}
-        <p className="text-xl md:text-2xl text-slate-300 mb-4 max-w-3xl mx-auto leading-relaxed">
-          The world&apos;s first hosted AI army platform puts three best-in-class
-          bots behind one solo operator.
-        </p>
-        <p className="text-lg text-slate-400 mb-12 italic">
-          No Docker. No terminal. No API key hunting. Here&apos;s my unfiltered take.
+        {/* PART 2: Mechanism Reveal — Clear & Specific */}
+        <p className="text-2xl md:text-3xl text-white font-bold mb-4 max-w-3xl mx-auto leading-snug">
+          OneManArmy deploys 3 AI bots that work 24/7 from one dashboard — no Docker, no terminal, no API keys.
         </p>
 
-        {/* CTA */}
+        {/* PART 3: Outcome + Identity Shift — Reader Focused */}
+        <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+          So you can run an operation that used to need a team of 50, alone, in under 5 minutes.
+        </p>
+
+        {/* Supporting Proof Line */}
+        <p className="text-lg text-slate-400 mb-10 italic">
+          Built. Deployed. Working while I sleep. Here&apos;s my unfiltered review.
+        </p>
+
+        {/* CTA Block */}
         <a
           href="https://www.onemanarmy.net/special?aid=688027"
           target="_blank"
@@ -49,11 +54,12 @@ export default function Hero() {
           <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
         </a>
 
-        {/* Trust */}
-        <p className="mt-8 text-sm text-slate-500">
-          I&apos;ve been running AI tools in my business for over a year. I know
-          what works, what breaks, and what&apos;s hype.
-        </p>
+        {/* Micro Reassurance */}
+        <div className="mt-6 flex items-center justify-center gap-6 text-sm text-slate-500">
+          <span>✓ One-time payment</span>
+          <span>✓ 14-day guarantee</span>
+          <span>✓ $682 bonuses included</span>
+        </div>
       </div>
     </section>
   );
