@@ -1,65 +1,46 @@
 "use client";
 
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Zap } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 text-white py-20 px-4">
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-indigo-500 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full blur-3xl" />
-      </div>
-
-      <div className="relative max-w-5xl mx-auto text-center">
+    <section className="py-20 px-4 bg-white text-center">
+      <div className="max-w-4xl mx-auto">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-2.5 mb-10">
-          <Sparkles className="w-4 h-4 text-amber-400" />
-          <span className="text-sm font-semibold text-amber-300">
-            EXCLUSIVE: $682 Bonus Pack — FREE
-          </span>
+        <div className="inline-flex items-center gap-2 bg-indigo-50 text-indigo-700 rounded-full px-5 py-2.5 mb-8 text-sm font-semibold">
+          <Zap className="w-4 h-4" />
+          AI-Powered Business Automation
         </div>
 
-        {/* 3-PART HEADLINE — Chad Nicely Doctrine */}
-        {/* PART 1: Pattern Interrupt — Short & Bold */}
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] mb-6 tracking-tight">
-          <span className="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">
-            Humans Are the Bottleneck.
-          </span>
+        {/* Headline */}
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-6 leading-tight">
+          The AI Army Platform That Turns Solo Operators Into{" "}
+          <span className="text-indigo-600">One-Person Powerhouses</span>
         </h1>
 
-        {/* PART 2: Mechanism Reveal — Clear & Specific */}
-        <p className="text-2xl md:text-3xl text-white font-bold mb-4 max-w-3xl mx-auto leading-snug">
-          OneManArmy deploys 3 AI bots that work 24/7 from one dashboard — no Docker, no terminal, no API keys.
+        {/* Subheadline */}
+        <p className="text-xl text-slate-600 mb-4 max-w-2xl mx-auto">
+          Deploy three best-in-class AI bots from one dashboard. No Docker. No terminal. No API keys. Live in 5 minutes.
         </p>
 
-        {/* PART 3: Outcome + Identity Shift — Reader Focused */}
-        <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-          So you can run an operation that used to need a team of 50, alone, in under 5 minutes.
+        <p className="text-lg text-slate-500 mb-10 italic">
+          The complete toolkit that eliminates the hard parts of scaling a solo business.
         </p>
 
-        {/* Supporting Proof Line */}
-        <p className="text-lg text-slate-400 mb-10 italic">
-          Built. Deployed. Working while I sleep. Here&apos;s my unfiltered review.
-        </p>
-
-        {/* CTA Block */}
+        {/* CTA */}
         <a
           href="https://www.onemanarmy.net/special?aid=688027"
           target="_blank"
           rel="noopener sponsored"
-          className="group inline-flex items-center gap-3 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-white font-bold text-xl px-10 py-5 rounded-2xl transition-all hover:scale-105 shadow-2xl shadow-amber-500/25"
+          className="inline-flex items-center gap-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-lg px-10 py-5 rounded-xl transition-all hover:scale-105 shadow-lg"
         >
-          Get OneManArmy + My $682 Bonus Pack
-          <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+          Get OneManArmy + $682 Bonus Pack
+          <ArrowRight className="w-5 h-5" />
         </a>
 
-        {/* Micro Reassurance */}
-        <div className="mt-6 flex items-center justify-center gap-6 text-sm text-slate-500">
-          <span>✓ One-time payment</span>
-          <span>✓ 14-day guarantee</span>
-          <span>✓ $682 bonuses included</span>
-        </div>
+        <p className="mt-6 text-sm text-slate-400">
+          ✓ Instant access ✓ 14-day guarantee ✓ One-time payment
+        </p>
       </div>
     </section>
   );

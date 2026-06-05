@@ -2,22 +2,18 @@
 
 export default function Footer() {
   return (
-    <footer className="py-12 px-4 bg-slate-900 text-slate-400">
-      <div className="max-w-4xl mx-auto text-center">
-        <p className="mb-4">
+    <footer className="py-12 px-4 bg-slate-950 text-slate-400 text-center">
+      <div className="max-w-2xl mx-auto">
+        <p className="mb-4 text-sm">
           © 2026 [Your Name]. All rights reserved.
         </p>
-        <p className="text-sm mb-6">
+        <p className="text-xs mb-6">
           This is an independent review and is not officially affiliated with OneManArmy.
         </p>
-        <div className="bg-slate-800 rounded-xl p-6 max-w-2xl mx-auto">
-          <h4 className="font-semibold text-slate-300 mb-2">Disclaimer</h4>
-          <p className="text-sm">
-            The results discussed on this page are my own and are not typical.
-            Your results will vary based on your effort, experience, and market
-            conditions. The bonus values listed represent what I would charge if
-            selling these products separately, not guaranteed market prices.
-            Always do your own research before making purchasing decisions.
+        <div className="bg-slate-900 rounded-xl p-6 text-xs">
+          <p className="mb-2 font-semibold text-slate-300">Affiliate Disclosure</p>
+          <p>
+            This review contains affiliate links. If you purchase through my link, I may earn a commission at no extra cost to you. I only recommend products I've personally tested or thoroughly researched.
           </p>
         </div>
       </div>
