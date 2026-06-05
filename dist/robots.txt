@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://onemanarmy-review.vercel.app/sitemap.xml
