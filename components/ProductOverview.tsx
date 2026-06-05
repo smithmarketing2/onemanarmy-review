@@ -8,65 +8,68 @@ export default function ProductOverview() {
       icon: Brain,
       name: "Paperclip",
       role: "AI CEO",
-      description:
-        "Plans goals, designs roles, proposes hires. You approve every decision.",
+      description: "Plans goals, designs roles, proposes hires. You approve every decision.",
+      color: "from-blue-500 to-indigo-500",
     },
     {
       icon: Zap,
       name: "OpenClaw",
       role: "Field Operator",
-      description:
-        "Executes skills, runs workflows, takes action via web, Telegram, or Discord.",
+      description: "Executes skills, runs workflows, takes action via web, Telegram, or Discord.",
+      color: "from-amber-500 to-orange-500",
     },
     {
       icon: Bot,
       name: "Hermes",
       role: "Intelligence Specialist",
-      description:
-        "Self-learning memory that writes its own skills and remembers your business.",
+      description: "Self-learning memory that writes its own skills and remembers your business.",
+      color: "from-emerald-500 to-teal-500",
     },
   ];
 
   return (
-    <section className="py-20 px-4 bg-white">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 text-center">
-          What Is OneManArmy?
-        </h2>
+    <section className="py-24 px-4 bg-white">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">
+            What Is{" "}
+            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              OneManArmy?
+            </span>
+          </h2>
+          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+            A hosted command dashboard that deploys three powerful AI bots from one cloud platform.
+          </p>
+        </div>
 
-        <p className="text-lg text-slate-600 mb-4 text-center max-w-2xl mx-auto">
-          OneManArmy is a hosted command dashboard that deploys three powerful
-          AI bots from one cloud platform:
-        </p>
-
-        <div className="grid md:grid-cols-3 gap-6 mt-12">
+        <div className="grid md:grid-cols-3 gap-8">
           {bots.map((bot) => (
             <div
               key={bot.name}
-              className="bg-slate-50 border border-slate-200 rounded-2xl p-6 hover:shadow-lg transition-shadow"
+              className="group relative bg-white rounded-3xl p-8 border border-slate-200 hover:border-transparent hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
             >
-              <bot.icon className="w-10 h-10 text-indigo-600 mb-4" />
-              <h3 className="text-xl font-bold text-slate-900 mb-1">
-                {bot.name}
-              </h3>
-              <p className="text-sm font-medium text-indigo-600 mb-3">
+              {/* Gradient border on hover */}
+              <div className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${bot.color} opacity-0 group-hover:opacity-10 transition-opacity`} />
+              
+              <div className={`inline-flex rounded-2xl p-4 mb-6 bg-gradient-to-br ${bot.color}`}>
+                <bot.icon className="w-8 h-8 text-white" />
+              </div>
+              
+              <h3 className="text-2xl font-bold text-slate-900 mb-1">{bot.name}</h3>
+              <p className={`text-sm font-bold mb-4 bg-gradient-to-r ${bot.color} bg-clip-text text-transparent`}>
                 {bot.role}
               </p>
-              <p className="text-slate-600">{bot.description}</p>
+              <p className="text-slate-600 leading-relaxed">{bot.description}</p>
             </div>
           ))}
         </div>
 
-        <div className="mt-12 bg-indigo-50 border border-indigo-200 rounded-2xl p-8 text-center">
-          <p className="text-lg font-semibold text-indigo-900 mb-2">
+        <div className="mt-16 bg-gradient-to-r from-indigo-50 to-blue-50 rounded-3xl p-10 text-center border border-indigo-100">
+          <p className="text-xl font-bold text-indigo-900 mb-3">
             The Promise
           </p>
-          <p className="text-slate-700">
-            Deploy your entire AI army in under 5 minutes with zero technical
-            setup. No servers. No Docker. No weekend lost to configuration.
-          </p>
-          <p className="text-sm text-slate-500 mt-4 italic">
-            The reality: I tested it. Here&apos;s what actually happened.
+          <p className="text-lg text-slate-700 max-w-2xl mx-auto">
+            Deploy your entire AI army in under 5 minutes with zero technical setup. No servers. No Docker. No weekend lost to configuration.
           </p>
         </div>
       </div>
